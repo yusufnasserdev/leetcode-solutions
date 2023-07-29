@@ -26,6 +26,21 @@ class Solution {
 
         nums.forEach { println(it) }
     }
+
+    /**
+     * Another implementation using other data structures besides the array itself
+     */
+
+    fun moveZeroesDS(nums: IntArray): Unit {
+        val list = nums.filterNot { i -> i == 0 }
+        for (i in 0.until(list.size)) nums[i] = list[i]
+        for (i in list.size.until(nums.size)) nums[i] = 0
+    }
 }
+
+
+
+
+
 
 
