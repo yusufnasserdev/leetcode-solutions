@@ -33,8 +33,8 @@ class Solution {
                 list.add(current.`val`)
             }
 
-            if (current?.left != null) deque.add(current.left)
-            if (current?.right != null) deque.add(current.right)
+            if (current.left != null) deque.add(current.left!!)
+            if (current.right != null) deque.add(current.right!!)
         }
 
         return list
